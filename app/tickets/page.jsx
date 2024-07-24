@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import TicketList from './TicketList'
+import Loading  from "../loading"
 
-export default function Tickets() {
+
+
+
+
+
+
+
+export default async function TicketDetails({params}) {
   return (
     <main>
-      <h2>Tickets</h2>
+   <nav>
+    <div>
+      <h2>Tickets </h2>
+      <p><small>Currently open Tickets</small></p>
+    </div>
+   </nav>
+
+    <Suspense fallback={<Loading/>}>
+    <TicketList />
+    </Suspense>
+  
     </main>
   )
 }
+

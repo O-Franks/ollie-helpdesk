@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from './dojo-logo.png'
+import Logo from '../components/stem logo.jpg'
 
 export default function Navbar() {
   return (
@@ -13,6 +13,8 @@ export default function Navbar() {
           width={70}
           quality={100}
           placeholder='blur'
+         
+         
 
 
           
